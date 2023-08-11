@@ -1,0 +1,27 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '12.4'
+#install! 'cocoapods', :deterministic_uuids => false
+
+target 'wifi_reborn' do
+  config = use_native_modules!
+
+  # Flags change depending on the env values.
+  #flags = get_default_flags()
+
+  use_react_native!(:path => config[:reactNativePath],:hermes_enabled => true,)
+  
+  target 'wifi_rebornTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  use_flipper!({ 'Flipper-Folly' => '2.6.9', 'Flipper' => '0.95.0', 'Flipper-RSocket' => '1.4.3' })
+post_install do |installer|
+   flipper_post_install(installer)
+   installer.pods_project.build_configurations.each do |config|
+   config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+ end
+ end
+end

@@ -1,0 +1,38 @@
+# Android build files
+.gradle/
+.idea/
+build/
+local.properties
+*.iml
+captures/
+
+# iOS build files
+Pods/
+*.xcworkspace
+*.xccheckout
+*.xcuserstate
+*.xcuserdata/
+xcuserdata/
+
+# Flutter build files (if applicable)
+.flutter-plugins
+.flutter-plugins-dependencies
+.dart_tool/
+.pub-cache/
+build/
+
+# React Native build files (if applicable)
+node_modules/
+ios/Pods/
+ios/build/
+ios/*.xcworkspace
+android/app/build/
+android/local.properties
+android/.gradle/
+android/captures/
+android/gradle.properties
+
+# Xcode build files (if using Xcode)
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/
