@@ -2,11 +2,17 @@
 
 This npm supports both Android and iOS.
 
+npm link : https://www.npmjs.com/package/react-native-pk-wifi-manager
+
 ## Getting started
 
 ### Mostly automatic installation
 
-`$ npm i react-native-pk-wifi-manager`
+        `$ npm i react-native-pk-wifi-manager`                               
+
+  or
+
+        `$ yarn add react-native-pk-wifi-manager` 
 
 ## Android
 
