@@ -167,7 +167,7 @@ export default class App extends React.Component {
       RNFetchBlob.config({
          trusty: true
       })
-         .fetch('GET', "https://172.20.0.1/api/system-information", headers)
+         .fetch('GET', "place your url here", headers)
          .then(response => {
             return response.json()
          })
