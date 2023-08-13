@@ -39,8 +39,8 @@ MyWifiModule.getAvailableWifiNetworks(true)
               
 });
 
-//connect with ssid and password method
-MyWifiModule.connectToWifi('ssid', 'password',)
+//connect with ssid and password method (isWep for iOS=true optional for Android)
+MyWifiModule.connectToWifi('ssid', 'password','isWep')
 .then(() => {
          
 })
